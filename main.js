@@ -6,20 +6,16 @@ let ctx = cnv.getContext("2d");
 cnv.width = 800;
 cnv.height = 600;
 
-// Global Variables
+// Global Variables (Once)
 let heliImg = document.createElement("img");
 heliImg.src = "img/heliBlueTransparent.png";
-
-let state = "start";
 let mouseIsPressed = false;
-let heli = {
-  x: 200,
-  y: 250,
-  w: 80,
-  h: 40,
-  speed: -10,
-  accel: 0.5
-};
+
+//Global Variables (Reset)
+let state;
+let heli;
+let wall1, wall2, wall3;
+reset();
 
 // Draw Function
 window.addEventListener("load", draw);
