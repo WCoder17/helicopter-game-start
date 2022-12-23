@@ -78,6 +78,7 @@ function checkCollisions() {
 }
 
 function gameOver() {
+  explosion.play();
   state = "gameover";
 
   setTimeout(reset, 2000);
