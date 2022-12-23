@@ -70,6 +70,8 @@ function checkCollisions() {
   // Collision with Top and Bottom Green Bars
   if (heli.y < 50) {
     gameOver();
+  } else if (heli.y + heli.h > cnv.height - 50) {
+    gameOver();
   }
 
   // Collision with the Walls
